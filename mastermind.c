@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   mastermind.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ylabrahm <ylabrahm@student.1337.ma>        +#+  +:+       +#+        */
+/*   By: ylabrahm <ylabrahm@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/14 15:07:10 by ylabrahm          #+#    #+#             */
-/*   Updated: 2023/01/14 22:41:20 by ylabrahm         ###   ########.fr       */
+/*   Updated: 2023/01/15 00:25:42 by ylabrahm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,25 +14,6 @@
 #include <stdlib.h>
 #include <unistd.h>
 #include <time.h>
-
-/*
-	time;
-	tryes;
-	playes_moves:
-	[
-		[1, 0, 1, 0]
-		[1, 0, 1, 0]
-		[1, 0, 1, 0]
-		[1, 0, 1, 0]
-	];
-	playes_results:
-	[
-		['X', 'O', 'X', 'X']
-		['X', 'O', 'X', 'X']
-		['X', 'O', 'X', 'X']
-		['X', 'O', 'X', 'X']
-	];
-*/
 
 typedef struct s_games
 {
@@ -144,7 +125,6 @@ t_games	*ft_set_game(int parties)
 		int random_num = (rand() % 5);
 		array[i] = random_num;
 	}
-	printf("\n\n%d %d %d %d\n\n", array[0], array[1], array[2], array[3]);
 	j = 0;
 	k = 0;
 	while (j < 10)
