@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   mastermind.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ylabrahm <ylabrahm@student.42.fr>          +#+  +:+       +#+        */
+/*   By: ylabrahm <ylabrahm@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/14 15:07:10 by ylabrahm          #+#    #+#             */
-/*   Updated: 2023/01/15 00:25:42 by ylabrahm         ###   ########.fr       */
+/*   Updated: 2023/01/16 01:47:43 by ylabrahm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -127,6 +127,7 @@ t_games	*ft_set_game(int parties)
 	}
 	j = 0;
 	k = 0;
+	system("clear");
 	while (j < 10)
 	{
 		printf("Give Your Numbers: ");
@@ -231,6 +232,7 @@ int main(void)
 	/* - */
 
 	user_name = calloc(128, sizeof(char));
+	system("clear");
 	printf("Please Enter Your Name: ");
 	scanf("%s", user_name);
 	fflush(stdin);
@@ -329,6 +331,38 @@ int main(void)
 				scanf("%d", &c);
 				fflush(stdin);
 			}
+		}
+		
+		if (user_menu_chosen_value == 3)
+		{
+			system("clear");
+			printf("\n");
+			printf(" Mastermind is a game of skill, in which two players (you vs the program) engage in a battle of wits and logic.\n");
+			printf(" One of the players is called the Codemaker (the program), and this player chooses, then hides, a secret code,\n");
+			printf(" which the other player (you), who is called the Codebreaker, must attempt to discover.\n");
+			printf("\n");
+			
+			printf(" Rules:\n");
+			printf("	*) You Have 10 Attempts to break the code.\n");
+			printf("	*) The code is combined between 0 and 4 (4 included)\n");
+			printf("	*) The code is combined with 4 digits (1 2 3 4 is an example)\n");
+			printf("	*) When the program told you to \"Give Your Numbers\" you should enter your code consecutively one digit after one, separeted by a space.\n");
+			printf("	*) After giving your number the program respons with 2 indicators,\n");
+			
+			
+			printf("	 	-> X: it means that you have entered an existant number, but not in his exact place \n");
+			printf("	 	-> O: it means that you entered a valid number in his place.\n");
+			
+			printf("	 Example: \n");
+			printf("	 program's number	:  3 1 2 4 \n");
+			printf("	 your number		:  3 4 0 0 \n");
+			printf("	 the respons.		:  O X \n");
+			printf("	 O, for the 3, and X for the 4.\n");
+
+			printf("\n");
+			printf("type [c] to continue : ");
+			scanf("%d", &c);
+			fflush(stdin);
 		}
 		
 		if (user_menu_chosen_value == 4)
